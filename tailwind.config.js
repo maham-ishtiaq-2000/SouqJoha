@@ -1,13 +1,20 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}", // Adjust as needed
-  ],
+  mode: "jit",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '60': '15rem', // Assuming 1rem = 4px, 15rem would be 60px
+      },
+      colors: {
+        primary: "#4A3AFF",
+        yellow : "#f6c945",
+        purple : "#3e0652"
+      },
+      backgroundImage: {
+        Hero: "url('assets/Hero.png')",
+      },
+    },
   },
   plugins: [],
-  variants: {
-    display: ['responsive', 'group-hover', 'group-focus'],
-   },
-}
+};
