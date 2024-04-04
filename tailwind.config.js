@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         primary: "#4A3AFF",
         yellow : "#f6c945",
-        purple : "#3e0652"
+        purple : "#3e0652",
+        lightPurple : "#D8BfD8"
       },
       backgroundImage: {
         Hero: "url('assets/Hero.png')",

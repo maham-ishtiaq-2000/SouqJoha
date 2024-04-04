@@ -1,11 +1,11 @@
 import React from 'react';
-import Aman from '../../assets/aman.png';
-import Masary from '../../assets/masary.png';
-import Accept from '../../assets/accept.png';
-import MasterCard from '../../assets/masterCard.png';
-import Visa from '../../assets/visa.png';
-import GooglePlayLogo from '../../assets/googlePlay.png';
-import Logo from '../../assets/SouqLogo.png';
+import Aman from '../../../public/assets/aman.png';
+import Masary from '../../../public/assets/masary.png';
+import Accept from '../../../public/assets/accept.png';
+import MasterCard from '../../../public/assets/masterCard.png';
+import Visa from '../../../public/assets/visa.png';
+import GooglePlayLogo from '../../../public/assets/googlePlay.png';
+import Logo from '../../../public/assets/SouqLogo.png';
 
 const Footer2 = () => {
   return (

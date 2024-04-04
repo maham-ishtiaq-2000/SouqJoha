@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import Header from '../src/Components/Header/Header';
-import DailyDeals from './Components/Products/DailyDeals';
-import Products from './Components/Products/Products';
-import Footer from './Components/Footer/Footer';
-import Footer2 from './Components/Footer/Footer2';
+import { useState } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './AppRoutes';
 
 
 function App() {
@@ -11,11 +9,9 @@ function App() {
  
   return (
     <>
-       <Header></Header>
-       <DailyDeals></DailyDeals>
-       <Products></Products>
-       <Footer></Footer>
-       <Footer2></Footer2>
+       <Router>
+          <AppRoutes></AppRoutes>
+       </Router>
     </>
   )
 }

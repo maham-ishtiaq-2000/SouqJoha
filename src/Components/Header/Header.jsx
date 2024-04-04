@@ -2,11 +2,11 @@ import React,{useState} from 'react';
 import Navbar from './DropdownHeader/Navbar';
 import { FaSearch, FaChevronDown, FaUserAlt, FaHeart, FaShoppingCart } from 'react-icons/fa';
 import AutoPlayCarousel from '../Carousels/AutoPlayCarousel';
-import img1 from '../../assets/img1.png'; 
-import img2 from '../../assets/img2.png';
-import img3 from '../../assets/img3.png';
+import img1 from '../../../public/assets/img1.png'; 
+import img2 from '../../../public/assets/img2.png';
+import img3 from '../../../public/assets/img3.png';
 
-const Header = () => {
+const Header = ({screen}) => {
 
         const slides = [
         img1, 
@@ -98,7 +98,7 @@ const Header = () => {
 
                 </div>
             </div>
-            <AutoPlayCarousel slides={slides}></AutoPlayCarousel>
+            {screen === "mainScreen" && <AutoPlayCarousel slides={slides}></AutoPlayCarousel>}
 
             
         </>

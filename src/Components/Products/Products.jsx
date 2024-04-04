@@ -15,7 +15,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 2,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -24,7 +24,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 3,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -33,7 +33,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 4,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -42,7 +42,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 5,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -51,7 +51,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 6,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -74,7 +74,7 @@ const Products = () => {
           {heading : "Computers And Laptops",
           products : [
               {
-                id: 1,
+                id: 7,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -83,7 +83,7 @@ const Products = () => {
                 discountPercentage: 18,
               },
               {
-                id: 3,
+                id: 8,
                 title: 'Copper Necklace',
                 description: 'Copper accessory necklace',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -92,7 +92,7 @@ const Products = () => {
                 discountPercentage: 29,
               },
               {
-                  id: 2,
+                  id: 9,
                   title: 'Silver Necklace',
                   description: 'Silver necklace with dark red accessory',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -115,7 +115,7 @@ const Products = () => {
             {heading : "Health And Beauty",
         products : [
             {
-              id: 1,
+              id: 10,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -124,7 +124,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 11,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -133,7 +133,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 12,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -142,7 +142,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 13,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -151,7 +151,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 14,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -160,7 +160,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 15,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -183,7 +183,7 @@ const Products = () => {
           {heading : "Modern Home",
         products : [
             {
-              id: 1,
+              id: 16,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -192,7 +192,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 17,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -201,7 +201,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 18,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -210,7 +210,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 19,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -219,7 +219,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 20,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -228,7 +228,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 21,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -251,7 +251,7 @@ const Products = () => {
           {heading : "Jewellery",
         products : [
             {
-              id: 1,
+              id: 22,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -260,7 +260,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 23,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -269,7 +269,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 24,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -278,7 +278,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 25,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -287,7 +287,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 26,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -296,7 +296,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 27,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -319,7 +319,7 @@ const Products = () => {
           {heading : "Shoes",
         products : [
             {
-              id: 1,
+              id: 28,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -328,7 +328,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 29,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -337,7 +337,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 30,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -346,7 +346,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 31,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -355,7 +355,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 32,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -364,7 +364,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 33,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -387,7 +387,7 @@ const Products = () => {
           {heading : "Bags",
         products : [
             {
-              id: 1,
+              id: 34,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -396,7 +396,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 35,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -405,7 +405,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 36,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -414,7 +414,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 37,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -423,7 +423,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 38,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -432,7 +432,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 39,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -455,7 +455,7 @@ const Products = () => {
           {heading : "Baby Accessories",
         products : [
             {
-              id: 1,
+              id: 40,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -464,7 +464,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 41,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -473,7 +473,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 42,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -482,7 +482,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 43,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -491,7 +491,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 44,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -500,7 +500,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 45,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -523,7 +523,7 @@ const Products = () => {
           {heading : "Watches",
         products : [
             {
-              id: 1,
+              id: 46,
               title: 'Silver Necklace',
               description: 'Silver necklace with dark red accessory',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -532,7 +532,7 @@ const Products = () => {
               discountPercentage: 18,
             },
             {
-              id: 3,
+              id: 47,
               title: 'Copper Necklace',
               description: 'Copper accessory necklace',
               imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -541,7 +541,7 @@ const Products = () => {
               discountPercentage: 29,
             },
             {
-                id: 2,
+                id: 48,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -550,7 +550,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 49,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -559,7 +559,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 50,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -568,7 +568,7 @@ const Products = () => {
                 discountPercentage: 18,
             },
             {
-                id: 2,
+                id: 51,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -591,7 +591,7 @@ const Products = () => {
           {heading : "Glasses",
           products : [
               {
-                id: 1,
+                id: 52,
                 title: 'Silver Necklace',
                 description: 'Silver necklace with dark red accessory',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -600,7 +600,7 @@ const Products = () => {
                 discountPercentage: 18,
               },
               {
-                id: 3,
+                id: 52,
                 title: 'Copper Necklace',
                 description: 'Copper accessory necklace',
                 imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -609,7 +609,7 @@ const Products = () => {
                 discountPercentage: 29,
               },
               {
-                  id: 2,
+                  id: 54,
                   title: 'Silver Necklace',
                   description: 'Silver necklace with dark red accessory',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -618,7 +618,7 @@ const Products = () => {
                   discountPercentage: 18,
               },
               {
-                  id: 2,
+                  id: 55,
                   title: 'Silver Necklace',
                   description: 'Silver necklace with dark red accessory',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -627,7 +627,7 @@ const Products = () => {
                   discountPercentage: 18,
               },
               {
-                  id: 2,
+                  id: 56,
                   title: 'Silver Necklace',
                   description: 'Silver necklace with dark red accessory',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -636,7 +636,7 @@ const Products = () => {
                   discountPercentage: 18,
               },
               {
-                  id: 2,
+                  id: 57,
                   title: 'Silver Necklace',
                   description: 'Silver necklace with dark red accessory',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -659,7 +659,7 @@ const Products = () => {
             {heading : "Electronics",
             products : [
                 {
-                  id: 1,
+                  id: 58,
                   title: 'Silver Necklace',
                   description: 'Silver necklace with dark red accessory',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -668,7 +668,7 @@ const Products = () => {
                   discountPercentage: 18,
                 },
                 {
-                  id: 3,
+                  id: 59,
                   title: 'Copper Necklace',
                   description: 'Copper accessory necklace',
                   imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1914-768x767.jpg', // Replace with your image path
@@ -677,7 +677,7 @@ const Products = () => {
                   discountPercentage: 29,
                 },
                 {
-                    id: 2,
+                    id: 60,
                     title: 'Silver Necklace',
                     description: 'Silver necklace with dark red accessory',
                     imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -686,7 +686,7 @@ const Products = () => {
                     discountPercentage: 18,
                 },
                 {
-                    id: 2,
+                    id: 61,
                     title: 'Silver Necklace',
                     description: 'Silver necklace with dark red accessory',
                     imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -695,7 +695,7 @@ const Products = () => {
                     discountPercentage: 18,
                 },
                 {
-                    id: 2,
+                    id: 62,
                     title: 'Silver Necklace',
                     description: 'Silver necklace with dark red accessory',
                     imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path
@@ -704,7 +704,7 @@ const Products = () => {
                     discountPercentage: 18,
                 },
                 {
-                    id: 2,
+                    id: 63,
                     title: 'Silver Necklace',
                     description: 'Silver necklace with dark red accessory',
                     imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', // Replace with your image path

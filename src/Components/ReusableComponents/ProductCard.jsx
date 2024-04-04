@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import missSue from '../../assets/MissSue.png';
-import productDescription from '../../assets/productDescription.png';
+import { useNavigate } from 'react-router-dom';
+import missSue from '../../../public/assets/MissSue.png';
+import productDescription from '../../../public/assets/productDescription.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart,faSpinner } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,6 +9,7 @@ import { faShoppingCart,faSpinner } from '@fortawesome/free-solid-svg-icons';
 const ProductCard = ({ product }) => {
     const [isHeartFilled, setIsHeartFilled] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
   
     const toggleHeartFill = () => {
       setIsLoading(true);
@@ -15,6 +17,10 @@ const ProductCard = ({ product }) => {
         setIsHeartFilled(!isHeartFilled);
         setIsLoading(false);
       }, 1000); 
+    };
+
+    const navigateToProductDetail = () => {
+      navigate(`/productDetailScreen/${product.id}`); // Assuming `product.id` is the identifier
     };
   
 
@@ -41,7 +47,7 @@ const ProductCard = ({ product }) => {
           -{product.discountPercentage}%
         </span>
       )}
-     <div className="flex justify-center items-center  w-full h-54 ">
+     <div className="flex justify-center items-center  w-full h-54 " onClick={navigateToProductDetail}>
        <img src={product.imageUrl} alt={product.title} className="object-scale-down h-full hover:opacity-75 transition-opacity duration-300 ease-in-out" style={{"maxWidth" : "15vh"}} />
     </div>
 
