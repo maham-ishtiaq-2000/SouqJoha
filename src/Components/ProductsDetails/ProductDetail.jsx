@@ -6,9 +6,21 @@ import ItrahSawal from '../../../public/assets/itrahSawal.png';
 import ChatNow from '../../../public/assets/chatNow.png';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP, FaWhatsapp, FaInstagram, FaGooglePlusG, FaPlus } from 'react-icons/fa';
 import ProductDetailSlider from './ProductDetailSlider';
+import ProductDetailsTab from './ProductDetailsTab';
+import ProductCard from '../ReusableComponents/ProductCard';
 
 const ProductDetail = () => {
     const [number, setNumber] = useState(1);
+
+    let products = {
+        id: 1,
+        title: 'Silver Necklace',
+        description: 'Silver necklace with dark red accessory',
+        imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', 
+        priceWithVAT: 'EGP90.00 With VAT',
+        originalPrice: 'EGP110.00',
+        discountPercentage: 18,
+    }
 
     const handleInputChange = (event) => {
         setNumber(event.target.value);
@@ -132,6 +144,24 @@ const ProductDetail = () => {
                           <ProductDetailSlider slides={slides}></ProductDetailSlider>
                         </div>
                 </div>
+
+                <ProductDetailsTab></ProductDetailsTab>
+                <div className="border-t border-1 border-gray-300 mt-5 mb-5 w-1/2 ml-40" />
+                <div className='w-3/4 ml-20 mt-10'>
+                <p className='font-semibold text-lg ml-20 mb-6 mt-10'>Related Products</p>
+                <div className="flex"> 
+                        <div className="w-1/3 "> 
+                        <ProductCard product={products}></ProductCard>
+                        </div>
+                        <div className="w-1/3 ">
+                        <ProductCard product={products}></ProductCard>
+                        </div>
+                        <div className="w-1/3 ">
+                        <ProductCard product={products}></ProductCard>
+                        </div>
+                    </div>
+                </div>
+
         </>
     )
 }

@@ -14,7 +14,6 @@ const carouselItems = [
     description: "Men's Red Sweater",
     val : 'EGP140.00 With VAT'
   },
-  // Add more items here
 ];
 
 const ProductDetailSlider = () => {
