@@ -20,8 +20,12 @@ const ProductCard = ({ product }) => {
     };
 
     const navigateToProductDetail = () => {
-      navigate(`/productDetailScreen/${product.id}`); // Assuming `product.id` is the identifier
+      navigate(`/productDetailScreen/${product.id}`); 
     };
+
+    const navigateToStore = () => {
+       navigate('/storeScreen/missSue')
+    }
   
 
 
@@ -48,14 +52,14 @@ const ProductCard = ({ product }) => {
         </span>
       )}
      <div className="flex justify-center items-center  w-full h-54 " onClick={navigateToProductDetail}>
-       <img src={product.imageUrl} alt={product.title} className="object-scale-down h-full hover:opacity-75 transition-opacity duration-300 ease-in-out" style={{"maxWidth" : "15vh"}} />
+       <img src={product.imageUrl} alt={product.title} className="object-scale-down h-full hover:opacity-75 transition-opacity duration-300 ease-in-out" style={{"maxWidth" : "15vh"}} onClick={navigateToProductDetail} />
     </div>
 
       <div className="px-6 py-4 justify-center" style={{"maxHeight" : "20vh"}}>
         <p className="text-gray-700 text-base text-lg text-center" style={{"minHeight" : "5vh"}}>
           {product.description}
         </p>
-        <img src={missSue} alt="Miss Sue" style={{ width: '200px', height: '70px' , marginLeft : '20px' , marginTop : '20px' , "maxHeight" : "5vh"}} />
+        <img src={missSue} alt="Miss Sue" style={{ width: '200px', height: '70px' , marginLeft : '20px' , marginTop : '20px' , "maxHeight" : "5vh"}} onClick={navigateToStore}/>
         <img src={productDescription} alt="Miss Sue" style={{ width: '250px', height: '70px' , marginLeft : '5px' , marginTop : '35px' }} />
       
       </div>

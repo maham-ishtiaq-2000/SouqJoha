@@ -8,9 +8,11 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP, FaWhatsapp, FaInsta
 import ProductDetailSlider from './ProductDetailSlider';
 import ProductDetailsTab from './ProductDetailsTab';
 import ProductCard from '../ReusableComponents/ProductCard';
+import { useNavigate } from 'react-router-dom';
 
 const ProductDetail = () => {
     const [number, setNumber] = useState(1);
+    const navigate = useNavigate();
 
     let products = {
         id: 1,
@@ -21,6 +23,10 @@ const ProductDetail = () => {
         originalPrice: 'EGP110.00',
         discountPercentage: 18,
     }
+
+    const navigateToStore = () => {
+        navigate('/storeScreen/missSue')
+     }
 
     const handleInputChange = (event) => {
         setNumber(event.target.value);
@@ -77,7 +83,7 @@ const ProductDetail = () => {
 
                                 <p className='text-3xl text-black mt-2 mb-3'>Silver necklace with dark red accessory</p>
                                 <p className='text-1xl text-black mb-4'>Silver necklace with dark red accessoey</p>
-                                <img src={MySue} width={"160px"} height={"100px"} className='mb-10'></img>
+                                <img src={MySue} width={"160px"} height={"100px"} className='mb-10' onClick={navigateToStore}></img>
                                 <p style={{ fontSize: '15px' }} className='text-black mb-3'>SKU: 1915</p>
                                 <p className='text-black text-2xl'>EGP110.00<span>EGP90.00</span>With VAT</p>
                                 <p style={{ fontSize: '15px' }} className='text-black mb-5 mt-5 text-green-500'>2 in stock</p>
