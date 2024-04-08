@@ -10,7 +10,8 @@ export const menuItems = [
       submenu: [
         {
           title: "Health And Beauty",
-          url: "/web-design",
+          name: "HealthAndBeauty",
+          url: "/categoryScreen/HealthAndBeauty",
           submenu: [
             {
               title: "Perfumes",
@@ -34,7 +35,8 @@ export const menuItems = [
         },
         {
           title: "Fashion And Style",
-          url: "/web-dev",
+          url: "/categoryScreen/FashionAndStyle",
+          name : "FashionAndStyle",
           submenu: [
             {
               title: "Men's Wear",
@@ -89,7 +91,8 @@ export const menuItems = [
         },
         {
           title: "Modern Home",
-          url: "/web-dev",
+          name:"ModernHome",
+          url: "/categoryScreen/ModernHome",
           submenu: [
             {
               title: "Furniture and Decoration",
@@ -115,7 +118,8 @@ export const menuItems = [
         },
         {
           title: "Mobile,Tablet And Accessories",
-          url: "/web-dev",
+          name : "Mobile,TabletsAndAccessories",
+          url: "/categoryScreen/Mobile,TabletsAndAccessories",
           submenu: [
             {
               title: "Accessories",
@@ -137,7 +141,8 @@ export const menuItems = [
         },
         {
           title: "Computer And Laptops",
-          url: "/web-dev",
+          name : "ComputerAndLaptops",
+          url: "/categoryScreen/ComputerAndLaptops",
           submenu: [
             {
               title: "Desktop Computers",
@@ -176,7 +181,8 @@ export const menuItems = [
         },
         {
           title: "Electronics",
-          url: "/web-dev",
+          name : "Electronics",
+          url: "/categoryScreen/Electronics",
           submenu: [
             {
               title: "TV's and Audios",
@@ -199,7 +205,8 @@ export const menuItems = [
         },
         {
           title: "Car Care",
-          url: "/web-dev",
+          name : "CarCare",
+          url: "/categoryScreen/CarCare",
           submenu: [
             {
               title: "Car Accessories",
@@ -231,34 +238,41 @@ export const menuItems = [
         submenu: [
           {
             title: "Auto Care",
-             url: "/web-dev",
+            name : "AutoCare",
+             url: "/categoryScreen/AutoCare",
             submenu: [
               {
                 title: "Washing and Cleaning",
-                url: "/frontend",
+                name : "WashingAndCleaning",
+                url: "/categoryScreen/WashingAndCleaning",
               },
               {
                 title: "polishing",
-                url: "/frontend",
+                name : "Polishing",
+                url: "/categoryScreen/Polishing",
               },
               {
                 title: "Oil and Filter Change",
-                url: "/frontend",
+                name : "OilAndFilterChange",
+                url: "/categoryScreen/OilAndFilterChange",
               },
               {
                 title: "Window tinting",
-                url: "/frontend",
+                name : "WindowTinting",
+                url: "/categoryScreen/WindowTinting",
               },
               {
                 title: "Paint &  Dent repair",
-                url: "/frontend",
+                name : "PaintAndDentRepair",
+                url: "/categoryScreen/PaintAndDentRepair",
               },
           
             ],
           },
           {
             title: "Entertainment",
-             url: "/web-dev",
+            name : "Entertainment",
+             url: "/categoryScreen/Entertainment",
             submenu: [
               {
                 title: "Cinems",
@@ -285,7 +299,8 @@ export const menuItems = [
           },
           {
             title: "Beauty Care",
-             url: "/web-dev",
+            name : "BeautyCare",
+            url: "/categoryScreen/BeautyCare",
             submenu: [
               {
                 title: "Clinic",
@@ -312,15 +327,18 @@ export const menuItems = [
           },
           {
             title: "Jewellery",
-            url: "/web-dev",
+            name : "Jewellery",
+            url: "/categoryScreen/Jewellery",
           },
           {
             title: "Travel & Tours",
-            url: "/web-dev",
+            name : "TravelAndTours",
+            url: "/categoryScreen/TravelAndTours",
           },
           {
             title: "Training and Eductaion",
-             url: "/web-dev",
+            name : "TrainingAndEducation",
+             url: "/categoryScreen/TrainingAndEducation",
             submenu: [
               {
                 title: "Private Schools",
@@ -339,7 +357,8 @@ export const menuItems = [
           },
           {
             title: "Wedding & Engagement",
-             url: "/web-dev",
+            name : "WeddingAndEngagement",
+             url: "/categoryScreen/WeddingAndEngagement",
             submenu: [
               {
                 title: "Wedding Dresses",
@@ -366,7 +385,8 @@ export const menuItems = [
           },
           {
             title: "Restaurant & Cafes",
-             url: "/web-dev",
+            name : "RestaurantAndCafes",
+             url: "/categoryScreen/RestaurantAndCafes",
             submenu: [
               {
                 title: "Restaurants",
@@ -387,7 +407,8 @@ export const menuItems = [
         submenu: [
           {
             title: "Accessories",
-             url: "/web-dev",
+            name : "Accessories",
+             url: "/categoryScreen/Accessories",
             submenu: [
               {
                 title: "Bracelets",
@@ -422,7 +443,8 @@ export const menuItems = [
           },
           {
             title: "Copper Work",
-             url: "/web-dev",
+            name : "CopperWork",
+             url: "/categoryScreen/CopperWork",
             submenu: [
               {
                 title: "Utensils",
@@ -436,7 +458,8 @@ export const menuItems = [
           },
           {
             title: "Leather",
-             url: "/web-dev",
+            name : "Leather",
+             url: "/categoryScreen/Leather",
             submenu: [
               {
                 title: "Bags",
@@ -456,7 +479,8 @@ export const menuItems = [
           },
           {
             title: "Pottery and Candles",
-            url: "/web-dev",
+            name : "PotteryAndCandles",
+            url: "/categoryScreen/PotteryAndCandles",
             submenu: [
               {
                 title: "Pottery",
@@ -472,7 +496,8 @@ export const menuItems = [
           },
           {
             title: "Glass",
-             url: "/web-dev",
+            name : "Glass",
+             url: "/categoryScreen/Glass",
             submenu: [
               {
                 title: "Embroided Utensils",
@@ -487,7 +512,8 @@ export const menuItems = [
           },
           {
             title: "Antique & Decor",
-             url: "/web-dev",
+            name : "AntiqueAndDecor",
+             url: "/categoryScreen/AntiqueAndDecor",
             submenu: [
               {
                 title: "Plates",
@@ -506,7 +532,8 @@ export const menuItems = [
           },
           {
             title: "Sewing & Embroidery",
-             url: "/web-dev",
+            name : "SewingAndEmbroidery",
+             url: "/categoryScreen/SewingAndEmbroidery",
             submenu: [
               {
                 title: "Knitwear",

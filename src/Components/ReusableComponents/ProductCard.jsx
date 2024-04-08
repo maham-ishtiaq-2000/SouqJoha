@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart,faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product,component }) => {
     const [isHeartFilled, setIsHeartFilled] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
@@ -27,12 +27,13 @@ const ProductCard = ({ product }) => {
        navigate('/storeScreen/missSue')
     }
   
+    const mainDivWidth = component === 'category' ? '25vh' : '30vh';
 
 
   return (
-    <div className="max-w-sm mx-auto rounded overflow-hidden bg-white shadow-lg border border-rounded border-gray-500 my-4 pt-6 relative hover:shadow-2xl transition-shadow duration-300 ease-in-out cursor-pointer" style={{ width: "30vh", height: "54vh" }}>
+    <div className="max-w-sm mx-auto rounded overflow-hidden bg-white shadow-lg border border-rounded border-gray-500 my-4 pt-6 relative hover:shadow-2xl transition-shadow duration-300 ease-in-out cursor-pointer" style={{ width: mainDivWidth, height: "56vh" }}>
     
-    <div onClick={!isLoading && toggleHeartFill} className="absolute left-5 top-5 flex justify-center items-center p-2 bg-white border rounded-full cursor-pointer" style={{ width: '40px', height: '60px', boxShadow: '0 2px 4px 0 rgba(156, 163, 175, 0.8)' }}>
+    <div onClick={!isLoading && toggleHeartFill} className="absolute left-2 top-5 flex justify-center items-center p-2 bg-white border rounded-full cursor-pointer" style={{ width: '40px', height: '60px', boxShadow: '0 2px 4px 0 rgba(156, 163, 175, 0.8)' }}>
     {isLoading ? (
       <FontAwesomeIcon
         icon={faSpinner}
@@ -72,7 +73,7 @@ const ProductCard = ({ product }) => {
          <p className='text-purple font-semibold text-lg'>{product.priceWithVAT}</p>
       </div>
       <div className="w-3/10 flex-grow">
-            <FontAwesomeIcon icon={faShoppingCart} className='text-white bg-purple p-3 rounded-full mt-5 ml-10'></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faShoppingCart} className='text-white bg-purple p-3 rounded-full mt-5 ml-5'></FontAwesomeIcon>
       </div>
     </div>
 
