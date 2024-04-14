@@ -5,9 +5,9 @@ import Products from '../ReusableComponents/Products';
 const SingleProduct = ({heading , productsList , imagesSlider1, imagesSlider2}) => {
 
     return(
-        <div className="flex flex-col md:flex-row w-full   py-5 mt-10">
+        <div className="flex flex-col md:flex-row w-full py-5 mt-10">
             <div className="md:w-1/4 w-full md:p-10 mb-5 md:mb-0 mt-10 mr-10" style={{"height" : "100vh" , "width" : "50vh"}}>
-            <div className="flex flex-col">
+            <div className="flex flex-col border-none">
                 <div className="mb-60 text-white p-4">
                    <ProductsSlider sliderImages={imagesSlider1}></ProductsSlider>
                 </div>

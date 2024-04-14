@@ -1,28 +1,142 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
+import styled from 'styled-components';
+import './ProductDetail.css';
 import Breadcrumb from './BreadCrumb';
-import MySue from '../../../public/assets/MissSue.png';
-import details from '../../../public/assets/productDescription.png';
-import ItrahSawal from '../../../public/assets/itrahSawal.png';
-import ChatNow from '../../../public/assets/chatNow.png';
+import MySue from '/assets/MissSue.png';
+import details from '/assets/productDescription.png';
+import ItrahSawal from '/assets/itrahSawal.png';
+import ChatNow from '/assets/chatNow.png';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP, FaWhatsapp, FaInstagram, FaGooglePlusG, FaPlus } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faBalanceScale } from '@fortawesome/free-solid-svg-icons';
 import ProductDetailSlider from './ProductDetailSlider';
 import ProductDetailsTab from './ProductDetailsTab';
 import ProductCard from '../ReusableComponents/ProductCard';
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineFullscreen, AiOutlineClose } from 'react-icons/ai'; 
+import BlackNecklace from '/assets/blackNecklace.jpeg';
+
+const Container = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height : 75%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.55), 0 14px 18px rgba(0, 0, 0, 0.55);
+  }
+`;
+
+const ZoomableImage = styled.img`
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-out;
+  cursor: zoom-in;
+`;
+
+const FullscreenIcon = styled(AiOutlineFullscreen)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 10;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 5px;
+`;
+
+const CloseIcon = styled(AiOutlineClose)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  padding: 5px;
+  margin-top: 30px;
+  margin-right: 70px;
+  z-index: 1050;  // Ensure it's above other content
+`;
+
+const FullscreenModal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+
+
 
 const ProductDetail = () => {
     const [number, setNumber] = useState(1);
     const navigate = useNavigate();
+    const productCountArray = Array.from({ length: 9 }, (_, index) => index);
+    const imageRef = useRef(null);
+    const [zoom, setZoom] = useState(false);
+    const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+    const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  
+    const handleMouseEnter = () => setZoom(true);
+    const handleMouseLeave = () => {
+      setZoom(false);
+    };
+  
+    const handleMouseMove = (e) => {
+      const { left, top, width, height } = imageRef.current.getBoundingClientRect();
+      const x = ((e.pageX - left) / width) * 100;
+      const y = ((e.pageY - top) / height) * 100;
+      setMousePosition({ x, y });
+    };
+  
+    const togglePreview = (e) => {
+        if (isPreviewOpen) {
+            window.location.reload();
+          } else {
+            setIsPreviewOpen(true);
+          }
+    };
+  
+    const zoomStyle = zoom ? {
+      transform: `scale(2)`,
+      transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`
+    } : {};
+  
+  
+  
+    
 
     let products = {
         id: 1,
         title: 'Silver Necklace',
         description: 'Silver necklace with dark red accessory',
-        imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', 
+        imageUrl: BlackNecklace, 
         priceWithVAT: 'EGP90.00 With VAT',
         originalPrice: 'EGP110.00',
         discountPercentage: 18,
     }
+
+    const productArray = [
+        { id: 1, name: 'Product 1'},
+        { id: 2, name: 'Product 2'},
+        { id: 3, name: 'Product 3'},
+        { id: 4, name: 'Product 4'},
+        { id: 5, name: 'Product 5'},
+        { id: 6, name: 'Product 6'},
+        { id: 7, name: 'Product 7'},
+        { id: 8, name: 'Product 8'},
+        { id: 9, name: 'Product 9'},
+      ];
+      
 
     const navigateToStore = () => {
         navigate('/storeScreen/missSue')
@@ -50,32 +164,48 @@ const ProductDetail = () => {
       ];
     return(
         <>
-               <div className="flex flex-col md:flex-row w-full md:px-10mt-2 text-white" >
-                    <div className="md:w-4/6 w-full p-3 mb-6 md:mb-0">
+              <div className="flex flex-col lg:flex-row w-full px-3 lg:px-10 mt-2 text-white">
+                 <div className="w-full md:w-4/6 p-3 mb-6 md:mb-0">
                     <div className="p-4 lg:ml-35 sm:ml-10">
                        <Breadcrumb items={breadcrumbItems} />
                     </div>
                     <div className="flex flex-col md:flex-row w-full md:px-10  text-white">
-                    <div className="md:w-1/2 w-full p-3 md:mb-0 flex justify-center items-center">
-                        <img
-                            src="https://souqjoha.com/wp-content/uploads/2019/09/1915.jpg"
-                            alt="Descriptive text for image"
-                            className="w-full h-auto mb-10 object-cover"
+                    <div className="md:w-1/2 w-full md:mb-0 flex justify-center items-center">
+                    <Container
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onMouseMove={handleMouseMove}
+                    >
+                        <FullscreenIcon onClick={togglePreview} size="24px" />
+                        <ZoomableImage
+                        ref={imageRef}
+                        src="https://souqjoha.com/wp-content/uploads/2019/09/1915.jpg"
+                        alt="Descriptive text for image"
+                        style={zoomStyle}
                         />
+                           {isPreviewOpen && (
+                        <FullscreenModal>
+                            <CloseIcon onClick={togglePreview} size="40px" />
+                            <img src="https://souqjoha.com/wp-content/uploads/2019/09/1915.jpg" alt="Full preview" style={{ maxWidth: '100%', maxHeight: '80%' }} />
+                        </FullscreenModal>
+                        )}
+                    </Container>
                     </div>
 
 
 
                         <div className="md:w-1/2 w-full p-3 pl-10">
                                 <div className="flex space-x-1"> {/* Right Div */}
-                                            <button className="text-black px-4 pt-2 pb-1 mb-1 rounded hover:border hover:border-black hover:text-red-500">
-                                            ♡ Add to wishlist
-                                        </button>
+                                <button className="text-black px-4 py-2 rounded hover:border hover:border-black hover:text-red-500" style={{minWidth: '150px', minHeight: '40px'}}>
+                                    <FontAwesomeIcon icon={faHeart} /> Add to wishlist
+                                </button>
 
-                                            <button className="text-black px-4 pt-3 rounded flex  hover:border hover:border-black ">
-                                                <span className="text-lg">𓌖</span> {/* Adjust the text size if necessary */}
-                                                <span className="ml-2 mb-2">Add to compare</span>
-                                            </button>
+                                <button className="text-black px-4 py-2 rounded flex items-center hover:border hover:border-black" style={{minWidth: '150px', minHeight: '40px'}}>
+                                    <FontAwesomeIcon icon={faBalanceScale} className="text-lg" />
+                                    <span className="ml-2">Add to compare</span>
+                                </button>
+
+
                                 </div>
                                 <div className="flex justify-end">
                                     <p className="bg-yellow w-20 items-center p-1 pl-6">-18%</p> {/* Adjusted the background color class to be more specific */}
@@ -83,7 +213,7 @@ const ProductDetail = () => {
 
                                 <p className='text-3xl text-black mt-2 mb-3'>Silver necklace with dark red accessory</p>
                                 <p className='text-1xl text-black mb-4'>Silver necklace with dark red accessoey</p>
-                                <img src={MySue} width={"160px"} height={"100px"} className='mb-10' onClick={navigateToStore}></img>
+                                <img src={MySue} width={"160px"} height={"100px"} className='mb-10 cursor-pointer' onClick={navigateToStore}></img>
                                 <p style={{ fontSize: '15px' }} className='text-black mb-3'>SKU: 1915</p>
                                 <p className='text-black text-2xl'>EGP110.00<span>EGP90.00</span>With VAT</p>
                                 <p style={{ fontSize: '15px' }} className='text-black mb-5 mt-5 text-green-500'>2 in stock</p>
@@ -146,27 +276,27 @@ const ProductDetail = () => {
                         
                     </div>
 
-                        <div className="md:w-2/6 w-full p-3">
+                    <div className="w-full md:w-2/6 p-3">
                           <ProductDetailSlider slides={slides}></ProductDetailSlider>
                         </div>
                 </div>
 
                 <ProductDetailsTab></ProductDetailsTab>
                 <div className="border-t border-1 border-gray-300 mt-5 mb-5 w-1/2 ml-40" />
-                <div className='w-3/4 ml-20 mt-10'>
-                <p className='font-semibold text-lg ml-20 mb-6 mt-10'>Related Products</p>
-                <div className="flex"> 
-                        <div className="w-1/3 "> 
-                        <ProductCard product={products}></ProductCard>
-                        </div>
-                        <div className="w-1/3 ">
-                        <ProductCard product={products}></ProductCard>
-                        </div>
-                        <div className="w-1/3 ">
-                        <ProductCard product={products}></ProductCard>
-                        </div>
+                <div className='mt-20 ml-40' style={{width: "70%"}}>
+                    <p className='font-semibold text-lg mb-6'>Related Products</p>
+                    <div className="flex flex-wrap -mx-2">
+                        {productCountArray.map((_, index) => (
+                            // Adjust the responsive width for each breakpoint
+                            <div className="w-full sm:w-1/2 mdsm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/3 2xl:w-1/4 custom-range-div p-2" key={index}>
+                                <ProductCard product={products} />
+                            </div>
+                        ))}
                     </div>
                 </div>
+
+
+
 
         </>
     )

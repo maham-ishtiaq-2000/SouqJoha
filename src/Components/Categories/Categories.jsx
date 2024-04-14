@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
+import './Categories.css';
 import ProductCard from '../ReusableComponents/ProductCard';
 import { FaSearch } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import Breadcrumb from '../ProductsDetails/BreadCrumb';
 import { menuItems } from '../../menuItems';
-import Logo from '../../../public/assets/SouqLogo.png';
+import Logo from '/assets/SouqLogo.png';
 import TopOffers from './TopOffers';
+import BlackNecklace from '/assets/blackNecklace.jpeg';
 
 
 const Categories = () => {
@@ -22,7 +24,7 @@ const Categories = () => {
     id: 1,
     title: 'Silver Necklace',
     description: 'Silver necklace with dark red accessory',
-    imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', 
+    imageUrl: BlackNecklace, 
     priceWithVAT: 'EGP90.00 With VAT',
     originalPrice: 'EGP110.00',
     discountPercentage: 18,
@@ -54,8 +56,8 @@ const Categories = () => {
   console.log(titles)
     return(
         <div className="flex justify-center items-center py-2">
-            <div className="flex flex-col sm:flex-row w-4/5 p-4" style={{ maxWidth: '80%' }}>
-                <div className="w-full sm:w-3/5 text-white p-4">
+          <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row w-4/5 p-4" style={{ maxWidth: '80%' }}>
+                <div className="w-full sm:w-3/5 text-white 2xl:w-3/5 3xl:w-3/5 lg:w-3/5 p-4">
                     <Breadcrumb items={breadcrumbItems} />
                     <p className='text-2xl text-black mt-5 mb-10'>Health And Beauty</p>
                     <div className="flex justify-between flex-wrap w-full">
@@ -81,7 +83,7 @@ const Categories = () => {
                                 </div>
                         </div>
                      </div>
-                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                     <div className="grid grid-cols-1 md:grid-cols-2 xl-lg:grid-cols-2 above-xl:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-4 gap-4">
                         {titles.map((title, index) => (
                           <div key={index} className="shadow-lg p-4 flex flex-col justify-between">
                             <div className="text-black flex items-center justify-between">
@@ -92,18 +94,20 @@ const Categories = () => {
                         ))}
                       </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            {Array.from({ length: 9 }).map((_, index) => (
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 md-lg:grid-cols-1 xl-lg:grid-cols-2 above-xl:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-3 gap-3">
+                        {Array.from({ length: 9 }).map((_, index) => (
                             <div key={index}>
                                 <ProductCard product={products} component="category" />
                             </div>
-                            ))}
-                        </div>
+                        ))}
+                    </div>
+
 
   
 
                 </div>
-                <div className="text-black p-4" style={{"width" : "30%"}}>
+                <div className="p-4 w-full 2xl:w-1/3 3xl:w-1/3 lg:w-1/3">
                     <p className='text-lg text-gray-500 ml-5'>Search</p>
                     <div className="flex w-80 ml-5 mt-3 mb-3">
                       <div className="flex-1 bg-purple h-1"></div>

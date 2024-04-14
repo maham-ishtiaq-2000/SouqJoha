@@ -15,7 +15,7 @@ const ProductsSlider = ({ sliderImages }) => {
   }, [sliderImages.length]);
 
   return (
-    <div className="slider" style={{ height: '30vh', width: '50vh' }}>
+    <div className="slider" style={{ height: '30vh', width: '50vh' , borderColor : "white"}}>
       {sliderImages.map((item, index) => (
         <div
           key={index}

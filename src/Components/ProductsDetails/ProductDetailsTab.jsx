@@ -24,54 +24,60 @@ const ProductDetailsTab = () => {
 
   // Define the content for each tab
   const tabContent = {
-    description: <p className='ml-40 mt-20 mb-20'>Silver necklace with dark red accessory</p>,
-    reviews: <div className='ml-40'>
-      <h2 className='text-2xl'>Reviews</h2>
-      <p className='mt-7 mb-7'>There are no reviews yet.</p>
-      <p>Be the first to review “Silver necklace with dark red accessory”</p>
-      <p>You must be logged in to post a review.</p>
-      <p className='mt-10 bg-lightGray text-white' style={{"width" : "180px"}}>Login with your Social ID</p>
-      <div className="flex items-center space-x-2 mt-5">
-          <input
-            id="privacyPolicy"
-            type="checkbox"
-            checked={isChecked}
-            onChange={handleCheckboxChange}
-            className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-          />
-          <label
-            htmlFor="privacyPolicy"
-            className="text-gray-700 select-none"
-            style={{"fontSize" : "10px"}}
-          >
-            I agree to my personal data being stored and used as per <span className='text-blue-500'>Privacy Policy</span>
-          </label>
-    </div>
-      <div className="flex mt-2 gap-2">
-        <div className="bg-blue-600 ">
-          <FaFacebookF className="text-white text-4xl m-2" />
-        </div>
-
-         <div className="bg-white border border-blue-500 shadow-md">
-          <FcGoogle className="text-4xl m-2" />
-        </div>
-
-        <div className="bg-pink-600 ">
-          <FaInstagram className="text-white text-4xl m-2" />
-        </div>
-      </div>
-    </div>,
-    offers: <p className='ml-40 mt-20 mb-20'>No more offers for this product!</p>,
-    policies: <p></p>,
-    inquiries: <div className='ml-40'>
-       <h2 className='text-2xl'>General Inquiries</h2>
-       <p className='mt-7 mb-7'>There are no inquiries yet.</p>
-    </div>,
+    description: 
+    <p className='lg:ml-40 mt-20 mb-20'>Silver necklace with dark red accessory</p>,
+      reviews: 
+        <div className='lg:ml-40'>
+          <h2 className='text-2xl'>Reviews</h2>
+          <p className='mt-7 mb-7'>There are no reviews yet.</p>
+          <p>Be the first to review “Silver necklace with dark red accessory”</p>
+          <p>You must be logged in to post a review.</p>
+          <p className='mt-10 bg-lightGray text-white' style={{"width" : "180px"}}>Login with your Social ID</p>
+          <div className="flex items-center space-x-2 mt-5">
+            <input
+              id="privacyPolicy"
+              type="checkbox"
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+              className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <label
+              htmlFor="privacyPolicy"
+              className="text-gray-700 select-none"
+              style={{"fontSize" : "10px"}}
+            >
+              I agree to my personal data being stored and used as per <span className='text-blue-500'>Privacy Policy</span>
+            </label>
+          </div>
+          <div className="flex mt-2 gap-2">
+            <div className="bg-blue-600 ">
+              <FaFacebookF className="text-white text-4xl m-2" />
+            </div>
+      
+            <div className="bg-white border border-blue-500 shadow-md">
+              <FcGoogle className="text-4xl m-2" />
+            </div>
+      
+            <div className="bg-pink-600 ">
+              <FaInstagram className="text-white text-4xl m-2" />
+            </div>
+          </div>
+        </div>,
+      offers: 
+        <p className='lg:ml-40 mt-20 mb-20'>No more offers for this product!</p>,
+      policies: 
+        <p className='lg:ml-40'></p>,
+      inquiries: 
+        <div className='lg:ml-40'>
+          <h2 className='text-2xl'>General Inquiries</h2>
+          <p className='mt-7 mb-7'>There are no inquiries yet.</p>
+        </div>,
+  
   };
 
   return (
     <>
-      <div className="tab-container ml-40 mt-20">
+      <div className="tab-container lg:ml-40 mt-20">
         {tabs.map((tab) => (
           <div
             key={tab.id}

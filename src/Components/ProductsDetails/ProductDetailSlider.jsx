@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import RedShirt from '/assets/redShirt.jpeg';
+import whiteNecklace from '/assets/whiteNecklace.jpeg'
 
 const carouselItems = [
   {
     id: 1,
-    imageUrl: "https://souqjoha.com/wp-content/uploads/2019/12/26712190005-788x824.jpg",
+    imageUrl: RedShirt,
     description: "Men's Sweater",
     val : 'EGP140.00 With VAT'
   },
   {
     id: 2,
-    imageUrl: "https://souqjoha.com/wp-content/uploads/2019/09/1914.jpg",
+    imageUrl: whiteNecklace,
     description: "Men's Red Sweater",
     val : 'EGP140.00 With VAT'
   },
@@ -43,7 +45,9 @@ const ProductDetailSlider = () => {
         <div className={`w-full h-auto max-w-md ${index === current ? 'block' : 'hidden'}`} key={slide.id}>
           {index === current && (
             <div className="flex flex-col items-start">
-              <img src={slide.imageUrl} alt={slide.title} className="w-64 h-64 object-cover" style={{"marginLeft" : "45px"}}/> {/* Adjusted height */}
+              <img src={slide.imageUrl} alt={slide.title} className="max-w-full h-auto object-cover mx-auto w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64"/>
+
+
               <button className="mt-4 py-2 text-black text-1xl font-semibold">{slide.description}</button>
               <button className="mt-4 py-2 text-purple text-2xl font-semibold">{slide.val}</button>
               <div className="flex justify-between w-full">

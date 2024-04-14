@@ -2,10 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Adjust the breakpoint as needed, 1024px is just an example for 'lg' */
-@media (min-width: 425px) {
-    .custom-slider-padding {
-      padding-top: 5px !important; /* Increase top padding on larger screens */
-    }
-  }
+
   

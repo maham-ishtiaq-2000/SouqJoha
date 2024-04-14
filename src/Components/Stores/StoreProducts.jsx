@@ -1,88 +1,94 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
+import './StoreProducts.css';
 import ProductCard from '../ReusableComponents/ProductCard';
 import { FiSearch } from 'react-icons/fi';
-import BestSellingProduct from '../../../public/assets/BestSellingProduct.png';
-
+import BestSellingProduct from '/assets/BestSellingProduct.png';
+import ear from '/assets/ear.jpeg';
 
 const StoreProducts = () => {
     const [selectedOption, setSelectedOption] = useState('latest');
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const searchArray = [{
+        id: 1,
+        title: 'Silver Necklace',
+        description: 'Silver necklace with dark red accessory',
+        imageUrl: BestSellingProduct, 
+        priceWithVAT: 'EGP90.00 With VAT',
+        originalPrice: 'EGP110.00',
+        discountPercentage: 18,
+    }, {
+        id: 2,
+        title: 'Grey Necklace',
+        description: 'Grey necklace with dark red accessory',
+        imageUrl: ear, 
+        priceWithVAT: 'EGP90.00 With VAT',
+        originalPrice: 'EGP110.00',
+        discountPercentage: 18,
+    }];
+
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const filteredSearchArray = searchArray.filter(item =>
+        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     let products = {
         id: 1,
         title: 'Silver Necklace',
         description: 'Silver necklace with dark red accessory',
-        imageUrl: 'https://souqjoha.com/wp-content/uploads/2019/09/1915-2048x2048.jpg', 
+        imageUrl: BestSellingProduct, 
         priceWithVAT: 'EGP90.00 With VAT',
         originalPrice: 'EGP110.00',
         discountPercentage: 18,
     }
     const productArray = Array(9).fill(products);
-  return (
-    <div className="flex flex-wrap w-3/4 ml-10 p-2 w-full">
-      <div className="w-3/4 sm:w-20p">
-        <div className="text-white p-4">
-            <div className="max-w-md mx-auto">
-                <div className="flex flex-col items-center pb-10 rounded-sm shadow-md">
-                    <h2 className="text-lg font-semibold mb-3 w-full text-center p-2 bg-veryLightGray text-white">Search</h2>
-                    <div className="flex items-center max-w-xs mx-auto mt-5 bg-white shadow-md overflow-hidden">
-                        <input
-                            className="px-4 py-5 w-full text-gray-700 leading-tight focus:outline-none"
-                            id="search"
-                            type="text"
-                            placeholder="Search..."
-                        />
-                        <button className="flex items-center justify-center w-12 h-12 bg-purple text-white ">
-                            <FiSearch size={20} />
-                        </button>
+
+    return (
+        <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:flex-row mdsm:flex-row w-90p mt-20 mx-auto p-2 custom-range-div">
+            <div className="w-3/4 sm:w-20p responsive-width">
+                <div className="text-white p-4">
+                    <div className="max-w-md mx-auto">
+                        <div className="flex flex-col items-center pb-10 rounded-sm shadow-md">
+                            <h2 className="text-lg font-semibold mb-3 w-full text-center p-2 bg-veryLightGray text-white">Search</h2>
+                            <div className="flex items-center max-w-xs mx-auto mt-5 bg-white shadow-md overflow-hidden">
+                                <input
+                                    className="px-4 py-5 w-full text-gray-700 leading-tight focus:outline-none"
+                                    id="search"
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={searchTerm}
+                                    onChange={handleSearchChange}
+                                />
+                                <button className="flex items-center justify-center w-12 h-12 bg-purple text-white">
+                                    <FiSearch size={20} />
+                                </button>
+                            </div>
+                        </div>
+                        <div className='mt-10 h-auto shadow-md'>
+                            <h2 className="text-lg font-semibold w-full text-center p-2 bg-veryLightGray text-white">Results</h2>
+                            {filteredSearchArray.map((item) => (
+                                <div className="flex flex-col md:flex-row w-full mx-auto">
+                                    <div className="w-full md:w-3/10 p-4">
+                                        <img src={item.imageUrl} alt="Product" className='h-20 w-20 mx-auto'></img>
+                                    </div>
+                                    <div className="w-full md:w-7/10 p-4 text-black">
+                                        <p>{item.description}</p>
+                                        <div className="flex flex-col md:flex-row items-baseline">
+                                            <span className="inline-block mt-5 md:mt-0 text-red-500">{item.priceWithVAT}</span>
+                                            <span className="ml-1 text-sm">With VAT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className='mt-10 h-auto shadow-md'>
-                <h2 className="text-lg font-semibold w-full text-center p-2 bg-veryLightGray text-white">Search</h2>
-                <div className="flex w-full mx-auto">
-                    <div className="w-3/10 p-4 mr-1">
-                        <img src={BestSellingProduct} className='h-20 w-20'></img>
-                    </div>
-                    <div className="w-7/10 p-4 ml-1 text-black">
-                        <p>Guaiche Leather Set with Crystal and Silver Pendants</p>
-                        <div className="flex items-baseline">
-                            <span className="inline-block mt-5 text-red-500">EGP80.00</span>
-                            <span className="ml-1 text-sm">With VAT</span>
-                        </div>
-                    </div>
-                </div>
-                <hr className="border-t border-gray-300 mx-auto" style={{"width" : "90%"}} />
-                <div className="flex w-full">
-                    <div className="w-3/10 p-4 mr-1">
-                        <img src={BestSellingProduct} className='h-20 w-20'></img>
-                    </div>
-                    <div className="w-7/10 p-4 ml-1 text-black">
-                        <p>Guaiche Leather Set with Crystal and Silver Pendants</p>
-                        <div className="flex items-baseline">
-                            <span className="inline-block mt-5 text-red-500">EGP80.00</span>
-                            <span className="ml-1 text-sm">With VAT</span>
-                        </div>
-                    </div>
-                </div>
-                <hr className="border-t border-gray-300" style={{"width" : "90%"}} />
-                <div className="flex w-full">
-                    <div className="w-3/10 p-4 mr-1">
-                        <img src={BestSellingProduct} className='h-20 w-20'></img>
-                    </div>
-                    <div className="w-7/10 p-4 ml-1 text-black">
-                        <p>Guaiche Leather Set with Crystal and Silver Pendants</p>
-                        <div className="flex items-baseline">
-                            <span className="inline-block mt-5 text-red-500">EGP80.00</span>
-                            <span className="ml-1 text-sm">With VAT</span>
-                        </div>
-                    </div>
-                </div>
-                <hr className="border-t border-gray-300" style={{"width" : "90%"}} />
-            </div>
-        </div>
-     
-      </div>
-      
-      <div className="w-full sm:w-80p">
+
+            <div className="w-full sm:w-80p">
         <div className="flex justify-between w-full">
             <div className="text-gray-500 italic p-4 ml-10">
                 <p>Showing all 22 results</p>
@@ -106,7 +112,7 @@ const StoreProducts = () => {
                 </div>
             </div>
         </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-1 mdsm:grid-cols-1 md:grid-cols-2 lg:w-grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
             {Array.from({ length: 9 }).map((_, index) => (
             <div key={index}>
                 <ProductCard product={products} />
@@ -114,8 +120,9 @@ const StoreProducts = () => {
             ))}
         </div>
       </div>
-    </div>
-  );
+
+        </div>
+    );
 }
 
 export default StoreProducts;

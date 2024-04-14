@@ -1,29 +1,28 @@
 import React from 'react';
-import Aman from '../../../public/assets/aman.png';
-import Masary from '../../../public/assets/masary.png';
-import Accept from '../../../public/assets/accept.png';
-import MasterCard from '../../../public/assets/masterCard.png';
-import Visa from '../../../public/assets/visa.png';
-import GooglePlayLogo from '../../../public/assets/googlePlay.png';
-import Logo from '../../../public/assets/SouqLogo.png';
+import Aman from '/assets/aman.png';
+import Masary from '/assets/masary.png';
+import Accept from '/assets/accept.png';
+import MasterCard from '/assets/masterCard.png';
+import Visa from '/assets/visa.png';
+import GooglePlayLogo from '/assets/googlePlay.png';
+import Logo from '/assets/SouqLogo.png';
 
 const Footer2 = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full bg-red-800 text-white">
-        <div className="md:w-full w-full md:mb-0 bg-yellow">
-          <div className="flex items-center">
-            <img src={Aman} alt="Aman" className="h-12 w-12 ml-60" /> 
-            <img src={Masary} alt="Masary" className="h-12 w-12" />
-            <img src={Accept} alt="Accept" className="h-12 w-12" />
-            <img src={Visa} alt="Visa" className="h-12 w-20" />
-            <img src={MasterCard} alt="MasterCard" className="h-12 w-20" />
-            <img src={GooglePlayLogo} alt="GooglePlayLogo" className="hidden md:block h-20 w-65 ml-40" />
-            <img src={Logo} alt="Logo" className="hidden md:block h-25 w-40 ml-40" />
-        </div>   
-        <div className="flex w-full justify-center mt-4 mb-2 md:mt-0">
-            <p className='text-black font-semibold'>Copyright © Souq Joha 2019 - All rights reserved.</p>   
-        </div>
-        </div>
+    <div className="bg-yellow text-white">
+      <div className="flex flex-wrap justify-center md:justify-start md:flex-nowrap items-center p-4 md:p-6">
+        <img src={Aman} alt="Aman" className="h-10 w-10 mx-2 my-1" />
+        <img src={Masary} alt="Masary" className="h-10 w-10 mx-2 my-1" />
+        <img src={Accept} alt="Accept" className="h-10 w-10 mx-2 my-1" />
+        <img src={Visa} alt="Visa" className="h-10 w-18 mx-2 my-1" />
+        <img src={MasterCard} alt="MasterCard" className="h-10 w-18 mx-2 my-1" />
+        {/* Additional left margin for the Google Play logo at larger screens */}
+        <img src={GooglePlayLogo} alt="GooglePlayLogo" className="h-16 w-52 mx-2 my-1 lg:ml-80 md:mx-3 lg:mx-4"/>
+        <img src={Logo} alt="Logo" className="h-30 w-32 mx-2 my-1 lg:ml-80 md:mx-3 lg:mx-4" />
+      </div>
+      <div className="flex w-full justify-center mt-2 mb-1">
+        <p className='text-black text-sm md:text-base font-semibold'>Copyright © Souq Joha 2019 - All rights reserved.</p>
+      </div>
     </div>
   );
 };

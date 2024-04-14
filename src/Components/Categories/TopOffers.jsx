@@ -1,5 +1,5 @@
 import React from 'react';
-import TopOfferImg from '../../../public/assets/topOfferImg.png';
+import TopOfferImg from '/assets/topOfferImg.png';
 
 const TopOffers = () => {
   return (

@@ -27,6 +27,13 @@ module.exports = {
       backgroundImage: {
         Hero: "url('assets/Hero.png')",
       },
+      screens: {
+        'custom': '641px',
+        'md-lg': '914px',
+        'xl-lg': '1024px', // Added to handle just above 1024px
+        'above-xl': '1102px', // Handles styles just after 1101px
+
+      },
     },
   },
   plugins: [],

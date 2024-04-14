@@ -1,0 +1,12 @@
+@media (max-width: 1334px) {
+    .responsive-flex {
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .custom-responsive {
+      width: 100%;
+    }
+  }
+  

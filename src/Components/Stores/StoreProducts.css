@@ -1,0 +1,22 @@
+/* Add this in your global styles.css or equivalent */
+@media (min-width: 649px) and (max-width: 777px) {
+    .custom-range-div {
+        flex : column !important;
+    }
+}
+
+/* Ensure global styles.css or equivalent is properly linked in your project */
+@media (min-width: 646px) and (max-width: 1115px) {
+    .custom-range-div {
+      flex-direction: column !important; /* Force column layout */
+    }
+  }
+
+/* Target screens with max width of 1114px and max height of 968px */
+@media (max-width: 1114px) and (max-height: 968px) {
+    .responsive-width {
+      width: 100% !important;
+    }
+  }
+  
+  

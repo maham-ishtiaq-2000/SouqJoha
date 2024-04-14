@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
-import StoreScreen from '../../../public/assets/StoreImage.png';
-import SueeLogo from '../../../public/assets/SueeLogo.png';
+import StoreScreen from '/assets/StoreImage.png';
+import SueeLogo from '/assets/SueeLogo.png';
 import { FaStar, FaRegStar,FaComment  } from 'react-icons/fa';
 import { FiHeart, FiBriefcase } from 'react-icons/fi';
 import { AiOutlineQuestion, AiOutlineUserAdd } from 'react-icons/ai'; 

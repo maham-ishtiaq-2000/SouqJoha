@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import missSue from '../../../public/assets/MissSue.png';
-import productDescription from '../../../public/assets/productDescription.png';
+import missSue from '/assets/MissSue.png';
+import productDescription from '/assets/productDescription.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart,faSpinner } from '@fortawesome/free-solid-svg-icons';
 
@@ -48,7 +48,7 @@ const ProductCard = ({ product,component }) => {
 
       
       {product.discountPercentage && (
-        <span className="inline-block bg-red-200 rounded-full px-3 py-1 mb-5 text-sm font-semibold text-red-700 absolute top-5 right-10 transform -translate-y-1/2 translate-x-1/2">
+        <span className="inline-block bg-yellow px-3 py-1 mb-5 text-sm font-semibold text-black absolute top-5 right-10 transform -translate-y-1/2 translate-x-1/2">
           -{product.discountPercentage}%
         </span>
       )}

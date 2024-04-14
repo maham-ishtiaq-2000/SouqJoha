@@ -1,39 +1,93 @@
 .tab-container {
-    display: flex;
-    position: relative; 
-    border-bottom: 1px solid gray;
-    width: 50%;
+  display: flex;
+  position: relative; 
+  border-bottom: 1px solid gray;
+  width: 50%; /* Adjust this value as needed to control the width on larger screens */
+  margin: 0 auto; /* Centers the tab container horizontally */
+  transition: all 0.3s ease; /* Smooth transition for layout changes */
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: none;
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  color: gray;
+  transition: padding 0.3s ease, font-size 0.3s ease; /* Smooth transition for padding and font-size changes */
+}
+
+.tab-highlight {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: calc(100% / 5); /* Adjust based on the number of tabs */
+  height: 1px;
+  background-color: #fff;
+  transition: left 0.3s ease, width 0.3s ease; /* Ensure the highlight bar also transitions smoothly */
+}
+
+.active {
+  background-color: #fff;
+  position: relative; 
+  z-index: 1; 
+  border-top: 3px solid #000;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  color: black;
+  font-weight: 300;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tab-container {
+    width: 80%; /* Adjust for medium screens */
+    flex-direction: column; /* Stack tabs vertically */
+    border-bottom: none; /* Remove bottom border */
   }
-  
+
   .tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    border-bottom: none; /* Always remove bottom border for tabs */
-    flex-grow: 1; /* Makes all tabs equal width */
-    flex-basis: 0; /* Ignores the content size */
-    text-align: center; /* Center the text within each tab */
-    color: gray;
+    padding: 8px 10px; /* Reduced padding */
+    font-size: 14px; /* Adjust font size if needed */
+    border-bottom: 1px solid gray; /* Add bottom border to each tab */
   }
-  
-  /* Highlight pseudo-element for active tab */
+
   .tab-highlight {
-    position: absolute;
-    bottom: -1px; /* Align with bottom border */
-    left: 0; /* Will be set dynamically */
-    width: calc(100% / 5); /* Assuming there are 5 tabs */
-    height: 1px;
-    background-color: #fff;
-    transition: left 0.3s ease; /* Animated transition for moving highlight */
+    display: none; /* Hide the highlight bar in column layout */
   }
-  
-  .active {
-    background-color: #fff;
-    position: relative; 
-    z-index: 1; 
-    border-top: 3px solid #000;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
-    color: black;
-    font-weight: 300;
+}
+
+
+/* Responsive styles for medium screens */
+@media (min-width: 581px) and (max-width: 768px) {
+  .tab-container {
+    width: 70%; /* Adjust as needed for this intermediate range */
   }
-  
+
+  .tab {
+    padding: 7px 10px; /* Optimize padding for intermediate screens */
+    font-size: 13px; /* Adjust font size for readability */
+    /* Additional styling adjustments specific to this range can be added here */
+  }
+}
+
+/* Responsive styles for small screens, adjusted for clarity */
+@media (max-width: 580px) {
+  .tab-container {
+    width: 95%; /* Make full use of available space on very small screens */
+    margin-right: 20; /* Ensure it remains centered */
+  }
+
+  .tab {
+    padding: 5px 5px; /* Optimal padding for small screens */
+    font-size: 12px; /* Ensure font size is legible on small devices */
+    /* Ensure consistent bottom border across tabs for a cohesive look */
+    border-bottom: 1px solid gray;
+  }
+
+  /* Ensuring tab-highlight is adjusted or hidden as needed for consistency */
+  .tab-highlight {
+    display: none; /* Consider hiding the highlight for simplicity on small screens */
+  }
+}

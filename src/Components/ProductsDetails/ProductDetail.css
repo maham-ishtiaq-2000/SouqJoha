@@ -1,0 +1,9 @@
+/* Add this in your global styles.css or equivalent */
+@media (min-width: 641px) and (max-width: 808px) {
+    .custom-range-div {
+        width: 100% !important; /* Force full width only within this range */
+    }
+}
+
+
+

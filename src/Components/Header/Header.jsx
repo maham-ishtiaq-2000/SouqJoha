@@ -2,9 +2,13 @@ import React,{useState} from 'react';
 import Navbar from './DropdownHeader/Navbar';
 import { FaSearch, FaChevronDown, FaUserAlt, FaHeart, FaShoppingCart } from 'react-icons/fa';
 import AutoPlayCarousel from '../Carousels/AutoPlayCarousel';
-import img1 from '../../../public/assets/img1.png'; 
-import img2 from '../../../public/assets/img2.png';
-import img3 from '../../../public/assets/img3.png';
+import img1 from '/assets/img1.png'; 
+import img2 from '/assets/img2.png';
+import img3 from '/assets/img3.png';
+import EnglishFlag from '/assets/EnglishFlag.jpeg';
+import ArabicFlag from '/assets/ArabicFlag.webp'
+import Logo from '/assets/SouqLogo.png';
+
 
 const Header = ({screen}) => {
 
@@ -16,8 +20,8 @@ const Header = ({screen}) => {
     const [selectedLanguage, setSelectedLanguage] = useState('English - Egypt');
     const [isOpen, setIsOpen] = useState(false);
     const languages = [
-        { name: 'English - Egypt', flagUrl: 'https://m.media-amazon.com/images/I/71lzCJduZKL.jpg' },
-        { name: 'Arabic - Egypt', flagUrl: 'https://cdn.britannica.com/79/5779-050-46C999AF/Flag-Saudi-Arabia.jpg' },
+        { name: 'English - Egypt', flagUrl: EnglishFlag },
+        { name: 'Arabic - Egypt', flagUrl: ArabicFlag},
       ];
     return(
         <>

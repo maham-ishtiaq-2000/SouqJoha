@@ -12,6 +12,7 @@ const CategoryScreen = () => {
       <Categories></Categories>
       <Footer></Footer>
       <Footer2></Footer2>
+      
   </>
   )
 }
